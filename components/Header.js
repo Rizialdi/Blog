@@ -29,7 +29,7 @@ class Header extends Component {
         
         let list_menu = menu.map((item) => {
             return (
-                <Link href = {(item.nom === 'Acceuil') ? '/' : item.nom} key = {item.nom} >
+                <Link href = {item.nom} key = {item.nom} >
                     <a>
                         <ListMenuItem  
                             className='list_menu_item' 
