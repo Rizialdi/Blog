@@ -1,0 +1,32 @@
+{
+    "cartes": [
+      {
+        "titre": "Apprendre Redux",
+        "description": "Il s'agit d'un container d'etat pour les applications Javascript. Il aide à ecrire des applications pour le bonheur des developpeurs",
+        "date": "26/05/17",
+        "image": "https://cdn-images-1.medium.com/max/919/1*EdiFUfbTNmk_IxFDNqokqg.png",
+        "tags": ["redux", "javascript", "flux", "application"]
+      },
+      {
+        "titre": "Apprendre React-Redux",
+        "description": "Bien que Redux n'aie aucun lien particulier avec le Framework Javascript React, l'union des deux permet de maintenir l'etat de nos applications predictif, quand des enfants de parents differents requierent la même informations",
+        "date": "20/04/17",
+        "image": "https://equimper.gallerycdn.vsassets.io/extensions/equimper/react-native-react-redux/1.9.0/1526851136093/Microsoft.VisualStudio.Services.Icons.Default",
+        "tags": ["react-redux", "react", "redux", "javascript"]
+      },
+      {
+        "titre": "Neural Network",
+        "description": "De nos jours, avec l'explosion de la puissance des CPU (Central Processing Unit) et de la disponibilité en grande quantité des données (Big Data) la science des données est en grande expansion.",
+        "date": "14/01/18",
+        "image": "https://brighterion.com/wp-content/uploads/2016/07/Neural.jpg",
+        "tags": ["deeplearning", "datascience", "machinelearnig", "ai"]
+      },
+      {
+        "titre": "Regression Lineaire",
+        "description": "Un modèle est classé comme regression lineaire lorqu'il peut etre representé par y = a.x + b, avec a la pentre et b le bruit.",
+        "date": "08/02/18",
+        "image": "https://cdn-images-1.medium.com/max/606/1*yLeh6JjWHenfH4zFOA3HpQ.png",
+        "tags": ["linearregression", "machinelearning", "ai", "datascience"]
+      }
+    ]
+  }
