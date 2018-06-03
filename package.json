@@ -1,0 +1,17 @@
+{
+  "name": "Blog",
+  "version": "1.0.0",
+  "description": "This project is a copy of my personal website and this time, using NextJs framework",
+  "main": "index.js",
+  "repository": "https://github.com/Rizialdi/Blog.git",
+  "author": "Diack Rasselio Abou",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next"
+  },
+  "dependencies": {
+    "next": "^6.0.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
