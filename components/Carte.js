@@ -80,7 +80,11 @@ export default (props) => {
                     
                     .carte-content:hover {
                         box-shadow: 5px 5px 25px 0 rgba(46,61,73,2);
-                    }            
+                    } 
+                    
+                    a:visited {
+                        color: black;
+                    }
                 `}</style>
             </div>
         )
