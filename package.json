@@ -7,7 +7,8 @@
   "author": "Diack Rasselio Abou",
   "license": "MIT",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "start": "node server.js"
   },
   "dependencies": {
     "next": "^6.0.3",
