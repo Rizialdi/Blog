@@ -7,7 +7,7 @@ class Header extends Component {
         let avatar = 'https://avatars2.githubusercontent.com/u/18710740?s=400&u=c11853b720d3288d376a3103cf5c8bb82c37fc13&v=4';
         
         let menu = [{
-            nom: 'Acceuil',
+            nom: 'Accueil',
             lien: "http://www.free-icons-download.net/images/house-home-icon-70046.png", 
             description: "icone_acceuil"
         },
