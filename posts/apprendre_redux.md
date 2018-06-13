@@ -9,6 +9,14 @@ url: "http://localhost:3000/Posts/Apprendre_Redux"
 
 Bonjour mesdammes et messieurs, je m'appele **Diack Rasselio Abou**.
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+ 
+```python
+s = "Python syntax highlighting"
+print s
+```
 
-
-# *Merci pour votre attention* 
+# **Merci pour votre attention**

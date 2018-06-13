@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 export default () => {
     return (
-        <Layout page_title = "Acceuil">
+        <Layout page_title = "Accueil">
             <p>
                 Je suis un enfant de la rue, je dessine et passe du 
                 temps avec les enfants; Je possède une moto et je vis

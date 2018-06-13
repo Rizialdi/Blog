@@ -8,10 +8,9 @@ const Template = (props) => {
         <Markdown source = {props.source.data.body} className = "markdown" />
         <style global jsx>{`
                 .markdown {
-                    color: black;
                     font-family: 'Ubuntu';
                     font-weight: 200;
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                 }
             `}</style>
     </Layout>
