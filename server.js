@@ -7,7 +7,9 @@ const serialize = data => JSON.stringify({ data });
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
-const handle = app.getRequestHandler()
+
+const routes = require('./routes')
+const handle = routes.getRequestHandler(app)
 
 app.prepare()
 .then(() => {

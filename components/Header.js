@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ListMenuItem from './List_menu_item'
-import Link from 'next/link'
+import {Link} from '../routes'
 
 class Header extends Component {
     render () {
@@ -29,7 +29,7 @@ class Header extends Component {
         
         let list_menu = menu.map((item) => {
             return (
-                <Link href = {item.nom} key = {item.nom} >
+                <Link route = {`/${item.nom}`} key = {item.nom} >
                     <a>
                         <ListMenuItem  
                             className='list_menu_item' 
