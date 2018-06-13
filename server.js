@@ -1,7 +1,9 @@
-const express = require('express')
-const next = require('next')
+const express = require('express');
+const next = require('next');
+const { parse } = require('url');
+const utils = require('./utils');
 
-const serialize = data => JSON.stringify({ data })
+const serialize = data => JSON.stringify({ data });
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -11,9 +13,26 @@ app.prepare()
 .then(() => {
   const server = express()
 
-  server.get('*', (req, res) => {
-    return handle(req, res)
+  server.get('/Posts/:id', (req, res) => {
+    const actualPage = '/Template'
+    const queryParams = {identifiant: req.params.id}
+    app.render(req, res, actualPage, queryParams)
   })
+
+  server.get('*', (req, res) => {
+    const parsedUrl = parse(req.url, true)
+    const { pathname } = parsedUrl
+
+    if(pathname.includes('/api/')) {
+        res.writeHead(200, { 'Content-Type': 'application/json'})
+        let markdown_name = pathname.split('/')[2];
+        (async _ => {
+            let posts = await utils.fetch(markdown_name);
+            return res.end(serialize(posts))
+        })()
+        }
+    return handle(req, res)
+    })
 
   server.listen(process.env.PORT || 3000, (err) => {
     if (err) throw err
