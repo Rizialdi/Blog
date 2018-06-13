@@ -45,6 +45,9 @@ export default (props) => {
                     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
                     justify-items: center;
                 }
+                li {
+                    color: white;
+                }
             `}</style>
         </div>
     )
