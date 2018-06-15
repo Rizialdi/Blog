@@ -16,10 +16,12 @@ const Template = (props) => {
                     color: black;
                     max-width: 950px
                 }
+
                 .markdown li {
                     color: black;
                     list-style-type: square;
                 }
+
                 .markdown pre {
                     background-color: #f5f5f5;
                     opacity: 0.7;
@@ -30,9 +32,12 @@ const Template = (props) => {
                     width: 100%; 
                     overflow-x: hidden 
                 }
+
                 img {
-                 width : 100% ; 
-                 height : auto
+                    display: block;
+                    max-width: 100% ; 
+                    height: auto;
+                    margin: 0 auto;
                 }
 
                 @media (min-width:900px) {
