@@ -30,6 +30,11 @@ const Template = (props) => {
                     width: 100%; 
                     overflow-x: hidden 
                 }
+                img {
+                 width : 100% ; 
+                 height : auto
+                }
+
                 @media (min-width:900px) {
                     .markdown pre {
                         background-color: #f5f5f5;
