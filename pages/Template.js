@@ -8,17 +8,42 @@ const Template = (props) => {
         <Markdown source = {props.source.data.body} className = "markdown" />
         <style global jsx>{`
                 .markdown {
-                    font-family: 'Ubuntu';
+                    font-family: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif';
                     font-weight: 200;
                     font-size: 1.6rem;
-                    width:50rem;
+                    width: 100%;
                     text-align: justify;
-                    color: black
+                    color: black;
+                    max-width: 950px
                 }
                 .markdown li {
                     color: black;
-                    list-style-type: hiragana
+                    list-style-type: square;
                 }
+                .markdown pre {
+                    background-color: #f5f5f5;
+                    opacity: 0.7;
+                    border-radius: 4px;
+                    border: solid 1px black;
+                    padding: 5px;
+                    background-size: auto 45px;
+                    width: 100%; 
+                    overflow-x: hidden 
+                }
+                @media (min-width:900px) {
+                    .markdown pre {
+                        background-color: #f5f5f5;
+                        opacity: 0.7;
+                        background-image: url('http://simpleicon.com/wp-content/uploads/Code-Optimization-3-128x128.png');
+                        background-repeat:no-repeat;
+                        background-position:right center;
+                        border-radius: 4px;
+                        border: solid 1px black;
+                        padding: 5px;
+                        background-size: auto 45px;
+                        width: 100%;  
+                    }
+                    }
             `}</style>
     </Layout>
 )}

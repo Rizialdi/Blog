@@ -48,6 +48,15 @@ export default (props) => {
                 li {
                     color: white;
                 }
+                @media (max-width:900px) {
+                    .header {
+                        visibility:hidden;
+                        width: 0px
+                    }
+                    .App {
+                        display:block
+                    }
+                    }
             `}</style>
         </div>
     )
