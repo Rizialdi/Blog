@@ -11,6 +11,13 @@ const Template = (props) => {
                     font-family: 'Ubuntu';
                     font-weight: 200;
                     font-size: 1.6rem;
+                    width:50rem;
+                    text-align: justify;
+                    color: black
+                }
+                .markdown li {
+                    color: black;
+                    list-style-type: hiragana
                 }
             `}</style>
     </Layout>
