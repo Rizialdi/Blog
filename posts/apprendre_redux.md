@@ -31,12 +31,6 @@ Une *action* est un object qui décrit explicitement ce qui vient de se passer d
 const action = {
     type : 'LIKE_POST'
     // autre attributs ou objets 
-    const action = {
-    type : 'LIKE_POST'
-    // autre attributs ou objets 
-    const action = {
-    type : 'LIKE_POST'
-    // autre attributs ou objets 
 }
 ```
 
@@ -46,12 +40,30 @@ Le *store* est le coeur de l'application dans cette architecture. Il est chargé
 
 ![images](/static/images/store_representation.png)
 
+Le *store* possède 3 fonctions pour communiquer avec les *components*:
+
+* *get()*, pour permettre l'acces au valeurs stockées;
+* *listen()*, pour notifier les *components* enregistrés qu'un changement de *state* a eu lieu;
+* *update()*, pour changer les valeurs des *components* enregistrés au store.
+
+Maintenant que toutes les pièces ont été vues, un diagramme les regroupant est necessaire:
+
+![images](/static/images/redux_representation.png)
+
+* l'*utilisateur* interagit avec l'*UI* et déclenche une *action*;
+* l'*action* contient le *type* et les autres attributs définit par le developpeur;
+* le *reducer* reçoit cette action et change le *state* de l'application en renvoyant un *nouveau state*;
+* le *nouveau state* renvoyé est stocké dans le *store* à l'aide de la fonction *update()*. Les fonctions *listen()* notifient un changement de *state* aux *components* qui en ont besoin;
+* la fonction *get()* permet finalement de recuperer le nouveau *state* et changer les valeurs des *components*
+
+## Quand commencer à l'utiliser
+
+Une question que beaucoup de personnes qui ont entendu parler de la librairie de gestion d'*état*,*Redux* se posent. Les avis dans la communauté divergent à cet égard, cependant des lignes directrices sont partagées:
+* **Lorsque plusieurs parties d'une application ont besoin de la meme donnée**. Cela arrive très souvent lorsque l'on partitionne l'interface graphique en tout petits *components*. C'est la l'idée d'une seule *source de vérité* dans l'application. 
+
+* **Lorsqu'il ya des props qui doivent traverser plusieurs couches pour arriver aux *components* visés**. La maintenance sans l'utilisation de *Redux* deviendrait bien vite *impossible*.
+
+* **Lorsque differentes pages de l'application partagent un objet commun -- le cache**. Cela est facilement observable dans les applications avec l'idée de *panier*.
+
+Penser à utiliser *Redux* quand il est absolument necessaire. Ainsi, son utilité sera propement mesuré et ne sera pas un handicap. Il est facile de tomber dans ce piège, et des questions de *sur-ingenieurie* d'une application entrainent plus de mal que de bien.
 [//TODO]: # (post pour pure function)
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
-```bash
-yarn add react-redux
-```
