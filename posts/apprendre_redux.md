@@ -25,11 +25,26 @@ Redux a trois elements clés dans son fonctionnement :
 * **reducer**
 * **store**
 
-Une *action* est un object décrit explicitement ce qui vient de se passer dans l'application. Il est necessaire pour le changement du *state*. Pour l'imaginer conceptuellement, on peut voir une *action* comme une capsule contenant des informations sur ce qui vient de se produire. Une action contient obligatoire l'attribut *type*, le reste n'incombe qu'au developpeur.
+Une *action* est un object qui décrit explicitement ce qui vient de se passer dans l'application. Il est necessaire pour le changement du *state*. Pour l'imaginer conceptuellement, on peut voir une *action* comme une capsule contenant des informations sur ce qui vient de se produire. Une action contient obligatoire l'attribut *type*, le reste n'incombe qu'au developpeur.
+
+```javascript
+const action = {
+    type : 'LIKE_POST'
+    // autre attributs ou objets 
+    const action = {
+    type : 'LIKE_POST'
+    // autre attributs ou objets 
+    const action = {
+    type : 'LIKE_POST'
+    // autre attributs ou objets 
+}
+```
 
 Un *reducer* decrit comment le *state* de l'application change en fonction de l'*action* qui est reçue. L'*action* decrit simplement ce qui s'est passé, mais pas comment le *state* de l'application repond. Le *reducer* prend comme arguments, un *state* et une *action* et renvoi un nouveau *state* - *(previousState, action) => newState* - pour l'application. Ici, bien noter le fait qu'un nouveau *state* est renvoyé, et non une *version modifiée* du précédent. Redux utilise des pures fonctions pour ne pas muter le *state*, ainsi pas de surprises, pas d'effets secondaires.
 
 Le *store* est le coeur de l'application dans cette architecture. Il est chargé de *fournir* les données qu'il contient, aux *components* qui en ont besoin lorsque qu'un *événement survient*.
+
+![images](/static/images/store_representation.png)
 
 [//TODO]: # (post pour pure function)
 ```javascript
