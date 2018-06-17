@@ -5,7 +5,11 @@ export default () => {
         <Layout page_title = "Contacts">
             <p>
                 Je reste disponible pour toute informations complementaires
-                    sur <a href = "mailto:rasselio.diack@gmail.com">Gmail</a>
+                sur <a href = "mailto:rasselio.diack@gmail.com">Gmail</a>.
+                <br/>
+                Je suis aussi très actif sur <a target="_blank" href = "https://www.linkedin.com/in/rasselio-diack/">Linkedin</a> pour toute opportunité d'emploi de votre part. 
+                <br/>
+                En fin de journée ou pendant le week-end, je fais souvent un tour sur mon <a target="new" href = "https://github.com/Rizialdi">Github</a>. N'hesitez pas à y faire un tour pour d'eventuelles collaborations ou juste y jeter un coup d'oeuil.
             </p>
             <style jsx>{`
                 * {
@@ -15,6 +19,10 @@ export default () => {
                 }
                 a {
                     color: darkblue;
+                }
+                p {
+                    max-width: 800px;
+                    text-align: justify;
                 }
             `}</style>
         </Layout>
