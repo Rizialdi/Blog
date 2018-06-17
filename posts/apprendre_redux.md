@@ -63,7 +63,7 @@ Une question que beaucoup de personnes qui ont entendu parler de la librairie de
 
 * **Lorsqu'il ya des props qui doivent traverser plusieurs couches pour arriver aux *components* visés**. La maintenance sans l'utilisation de *Redux* deviendrait bien vite *impossible*.
 
-* **Lorsque differentes pages de l'application partagent un objet commun -- le cache**. Cela est facilement observable dans les applications avec l'idée de *panier*.
+* **Lorsque differentes pages de l'application partagent un objet -- *le cache***. Cela est facilement observable dans les applications avec l'idée de *panier*.
 
 Penser à utiliser *Redux* quand il est absolument necessaire. Ainsi, son utilité sera propement mesuré et ne sera pas un handicap. Il est facile de tomber dans ce piège, et des questions de *sur-ingenieurie* d'une application entrainent plus de mal que de bien.
 [//TODO]: # (post pour pure function)

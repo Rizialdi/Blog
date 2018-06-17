@@ -30,7 +30,7 @@ const Template = (props) => {
                     padding: 5px;
                     background-size: auto 45px;
                     width: 100%; 
-                    overflow-x: hidden 
+                    overflow-x: auto 
                 }
 
                 img {
@@ -40,6 +40,9 @@ const Template = (props) => {
                     margin: 0 auto;
                 }
 
+                strong {
+                    font-weight: bold;
+                }
                 @media (min-width:900px) {
                     .markdown pre {
                         background-color: #f5f5f5;
