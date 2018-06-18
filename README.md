@@ -14,3 +14,14 @@ node server.js
 ```
 
 Go to [localhost:9000](http://localhost:9000/) to get a visual understanding.
+
+
+Page de Posts presentant sous forme de carte une notion abordéé sur le site:
+![Posts](https://i.imgur.com/3wB5mjz.jpg)
+
+Page concernant un post que j'ai écris:
+![Redux](https://i.imgur.com/3ksfur9.jpg)
+
+Page de Contacts:
+![Contacts](https://i.imgur.com/x09fTjq.jpg)
+
