@@ -43,6 +43,10 @@ const Template = (props) => {
                 strong {
                     font-weight: bold;
                 }
+
+                .markdown a {
+                    color: gray;
+                }
                 @media (min-width:900px) {
                     .markdown pre {
                         background-color: #f5f5f5;
