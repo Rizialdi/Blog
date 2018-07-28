@@ -45,6 +45,7 @@ Le nombre de noeuds dans une couche et le nombre de couches sont des hyperparam√
 
 Pour plus:
 
+
 http://www.asimovinstitute.org/neural-network-zoo/
 
 
