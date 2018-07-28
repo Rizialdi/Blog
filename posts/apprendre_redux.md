@@ -7,7 +7,7 @@ url: "http://drasselio.me/Posts/Apprendre_Redux"
 
 Plusieurs developpeurs se demandent ce qu'est Redux ? D'autres le voit comme une autre librairie à apprendre pour être capable de developper l'application de leur rêve. 
 
-Ne vous en faites pas, à la fin de ce post, vous comprendrez ce qu'est Redux, le problème qu'il aide à resoudre, et dans quels cas commencer à l'utiliser .
+Ne vous en faites pas, à la fin de ce post, vous comprendrez ce qu'est Redux, le problème qu'il aide à résoudre, et dans quels cas commencer à l'utiliser .
 
 ## Redux
 
