@@ -1,11 +1,26 @@
 import fetch from 'isomorphic-unfetch'
 import Markdown from 'react-markdown'
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShareAltSquare, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
 
 const Template = (props) => {
     return (
     <Layout page_title = {`Posts/${props.source.data.title}`}>
-        <Markdown source = {props.source.data.body} className = "markdown" />
+        <div>
+          <Markdown source = {props.source.data.body} className = "markdown" />
+          <div className="btn-multi">
+              <input type="checkbox" id="multi-btn" name="multi-btn" />
+              <label htmlFor="multi-btn">
+                  <a href= "https://www.facebook.com" className="btn btn-circle" target="_blank"><FontAwesomeIcon className = "icon" icon={faFacebookF} size="2x" rotation={45} /></a>
+                  <a href="https://www.twitter.com/" className="btn btn-circle" target="_blank"><FontAwesomeIcon className = "icon" icon={faTwitter} size="2x"/></a>
+                  <a href="https://www.linkedin.com/" className="btn btn-circle" target="_blank"><FontAwesomeIcon className = "icon" icon={faLinkedinIn} size="2x"/></a>
+                  <span className="btn btn-circle"><FontAwesomeIcon className = "icon" icon={faTimesCircle} size="2x" /></span>
+                  <FontAwesomeIcon className = "icon"  icon={faShareAltSquare} size="2x" color="white" />
+              </label>
+          </div>
+        </div>
         <style global jsx>{`
                 .markdown {
                     font-family: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif';
@@ -14,7 +29,8 @@ const Template = (props) => {
                     width: 100%;
                     text-align: justify;
                     color: black;
-                    max-width: 950px
+                    max-width: 950px;
+                    z-index: 1000
                 }
 
                 .markdown li {
@@ -39,13 +55,138 @@ const Template = (props) => {
                     height: auto;
                     margin: 0 auto;
                 }
-
+                .img_floatting_button {
+                  transform: rotate(-45deg)
+                }
                 strong {
                     font-weight: bold;
                 }
 
                 .markdown a {
                     color: gray;
+                }
+
+                .btn {
+                  display: inline-flex;
+                  font-family: 'Roboto', sans-serif;
+                  text-decoration: none;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  cursor: pointer;
+                  white-space: nowrap;
+                  padding: 8px 20px;
+                  font-size: 14px;
+                  background-color: black;
+                  border-radius: 2px;
+                  color: white;
+                  text-transform: uppercase;
+                  border: none;
+                  overflow: hidden;
+                  transition: all 0.2s ease-in;
+                  background-position: 50%;
+                  outline: none !important;
+                }
+                .btn.btn-circle {
+                  height: 50px;
+                  width: 50px;
+                  border-radius: 50%;
+                  padding: 0 !important;
+                  font-size: 18px;
+                }
+.               .btn-multi {
+                  position: fixed;
+                  z-index: 2000;
+                  height: 200px;
+                  width:200px;
+                  left: 75px;
+                  top: 0px;
+
+                }
+                .btn-multi input {
+                  display: none;
+                }
+                .btn-multi input:not(:checked) ~ label {
+                  transform: rotate(0);
+                }
+                .btn-multi input:not(:checked) ~ label .btn {
+                  border-radius: 0;
+                  height: 30px;
+                  width: 30px;
+                  box-shadow: none;
+                }
+                .btn-multi input:not(:checked) ~ label .btn:first-child {
+                  border-top-left-radius: 100%;
+                  transform: translate(25px, 25px);
+                }
+                .btn-multi input:not(:checked) ~ label .btn:nth-child(2) {
+                  border-top-right-radius: 100%;
+                  transform: translate(55px, 25px);
+                }
+                .btn-multi input:not(:checked) ~ label .btn:nth-child(3) {
+                  border-bottom-left-radius: 100%;
+                  transform: translate(25px, 55px);
+                }
+                .btn-multi input:not(:checked) ~ label .btn:nth-child(4) {
+                  border-bottom-right-radius: 100%;
+                  transform: translate(55px, 55px);
+                }
+                .btn-multi input:not(:checked) ~ label .btn .icon {
+                  opacity: 0;
+                }
+                .btn-multi input:not(:checked) ~ label > .icon {
+                  opacity: 1;
+                  cursor: pointer;
+                }
+                .btn-multi label {
+                  position: fixed;
+                  bottom: 5%;
+                  right: 5%;
+                  height: 110px;
+                  width: 110px;
+                  display: block;
+                  transform: rotate(45deg);
+                  transition: all 0.2s ease-in;
+                  cursor: default;
+                  border-radius: 30px;
+                  z-index: 2000
+                }
+                .btn-multi label .btn {
+                  position: absolute;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                }
+                .btn-multi label .btn:nth-child(2) {
+                  transform: translate(60px, 0);
+                }
+                .btn-multi label .btn:nth-child(3) {
+                  transform: translate(0, 60px);
+                }
+                .btn-multi label .btn:nth-child(4) {
+                  transform: translate(60px, 60px);
+                }
+                .btn-multi label .btn .icon {
+                  opacity: 1;
+                  transition: all 0.15s ease-in-out;
+                  transform: rotate(-45deg);
+                }
+                .btn-multi label > .icon {
+                  position: absolute;
+                  border-radius: 50%;
+                  display: flex;
+                  font-size: 30px;
+                  align-items: center;
+                  justify-content: center;
+                  height: 60px;
+                  width: 60px;
+                  top: 25px;
+                  left: 25px;
+                  opacity: 0;
+                  transition: all 0.25s ease-in-out;
+                }
+                .btn-multi label .icon {
+                  -webkit-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
                 }
                 @media (min-width:900px) {
                     .markdown pre {
