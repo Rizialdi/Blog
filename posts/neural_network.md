@@ -1,6 +1,6 @@
 ---
 date: "27-07-2018"
-title: "neural_network"
+title: "Neural Network"
 tag: ["neural", "ai", "network", "machine_learning"]
 url: "http://drasselio.me/Posts/Neural_Network"
 ---

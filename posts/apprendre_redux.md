@@ -1,6 +1,6 @@
 ---
 date: "14-06-2018"
-title: "apprendre_redux"
+title: "Apprendre Redux"
 tag: ["redux", "javascript", "flux", "application"]
 url: "http://drasselio.me/Posts/Apprendre_Redux"
 ---
