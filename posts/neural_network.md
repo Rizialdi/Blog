@@ -2,6 +2,7 @@
 date: "27-07-2018"
 title: "Neural Network"
 tag: ["neural", "ai", "network", "machine_learning"]
+summary: "De nos jours, avec l'explosion de la puissance des CPU (Central Processing Unit) et de la disponibilité en grande quantité des données (Big Data) la science des données est en grande expansion."
 url: "http://drasselio.me/Posts/Neural_Network"
 ---
 
@@ -68,6 +69,19 @@ http://www.asimovinstitute.org/neural-network-zoo/
 
 
 ```python
-def moi:
-    a = 1 + 3
+import pandas as pd
+
+destinations = pd.read_csv("destinations.csv")
+test = pd.read_csv("test.csv")
+train = pd.read_csv("train.csv")
 ```
+
+
+bb
+bb
+
+
+
+
+
+b

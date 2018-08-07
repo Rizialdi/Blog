@@ -2,6 +2,7 @@
 date: "14-06-2018"
 title: "Apprendre Redux"
 tag: ["redux", "javascript", "flux", "application"]
+summary: "Il s'agit d'un container d'etat pour les applications Javascript. Il aide à ecrire des applications pour le bonheur des developpeurs"
 url: "http://drasselio.me/Posts/Apprendre_Redux"
 ---
 
@@ -27,9 +28,9 @@ Redux a trois elements clés dans son fonctionnement :
 
 Une *action* est un object qui décrit explicitement ce qui vient de se passer dans l'application. Il est necessaire pour le changement du *state*. Pour l'imaginer conceptuellement, on peut voir une *action* comme une capsule contenant des informations sur ce qui vient de se produire. Une action contient obligatoire l'attribut *type*, le reste n'incombe qu'au developpeur.
 
-```javascript
+```js
 const action = {
-    type : 'LIKE_POST'
+    type : "LIKE_POST"
     // autre attributs ou objets 
 }
 ```
