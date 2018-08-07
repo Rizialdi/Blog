@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 export default () => {
     return (
-        <Layout page_title = "Curriculum">
+        <Layout page_title="Projets">
             <p>
                 I've worked a lot !!!
             </p>
@@ -17,5 +17,5 @@ export default () => {
                 }
             `}</style>
         </Layout>
-)
+    )
 }
