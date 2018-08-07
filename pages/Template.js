@@ -3,33 +3,34 @@ import Markdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShareAltSquare, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faTwitter, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const Template = (props) => {
-    return (
-    <Layout page_title = {`Posts/${props.source.data.title}`}>
-        <div>
-          <Markdown source = {props.source.data.body} className = "markdown" />
-          <div className="btn-multi">
-              <input type="checkbox" id="multi-btn" name="multi-btn" />
-              <label htmlFor="multi-btn">
-                  <a href= "https://www.facebook.com" className="btn btn-circle" target="_blank"><FontAwesomeIcon className = "icon" icon={faFacebookF} size="2x" rotation={45} /></a>
-                  <a href="https://www.twitter.com/" className="btn btn-circle" target="_blank"><FontAwesomeIcon className = "icon" icon={faTwitter} size="2x"/></a>
-                  <a href="https://www.linkedin.com/" className="btn btn-circle" target="_blank"><FontAwesomeIcon className = "icon" icon={faLinkedinIn} size="2x"/></a>
-                  <span className="btn btn-circle"><FontAwesomeIcon className = "icon" icon={faTimesCircle} size="2x" /></span>
-                  <FontAwesomeIcon className = "icon"  icon={faShareAltSquare} size="2x" color="white" />
-              </label>
-          </div>
+  return (
+    <Layout page_title={`Posts/${props.source.data.title}`}>
+      <div>
+        <Markdown source={props.source.data.body} className="markdown" />
+        <div className="btn-multi">
+          <input type="checkbox" id="multi-btn" name="multi-btn" />
+          <label htmlFor="multi-btn">
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${props.source.data.url}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faFacebookF} size="2x" rotation={45} /></a>
+            <a href={`https://twitter.com/intent/tweet?url=${props.source.data.url}&text=${props.source.data.summary}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faTwitter} size="2x" /></a>
+            <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${props.source.data.url}&title=${props.source.data.title}&summary=${props.source.data.summary}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faLinkedinIn} size="2x" /></a>
+            <span className="btn btn-circle"><FontAwesomeIcon className="icon" icon={faTimesCircle} size="2x" /></span>
+            <FontAwesomeIcon className="icon" icon={faShareAltSquare} size="2x" color="white" />
+          </label>
         </div>
-        <style global jsx>{`
+      </div>
+
+      <style global jsx>{`
                 .markdown {
                     font-family: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif';
                     font-weight: 200;
-                    font-size: 1.6rem;
+                    font-size: 1.1rem;
                     width: 100%;
                     text-align: justify;
                     color: black;
-                    max-width: 950px;
+                    max-width: 840px;
                     z-index: 1000
                 }
 
@@ -49,23 +50,34 @@ const Template = (props) => {
                     overflow-x: auto 
                 }
 
-                img {
+                .markdown img {
                     display: block;
                     max-width: 100% ; 
                     height: auto;
-                    margin: 0 auto;
+                    margin: 3em auto;
                 }
-                .img_floatting_button {
-                  transform: rotate(-45deg)
-                }
+                
                 strong {
                     font-weight: bold;
                 }
-
+                
                 .markdown a {
                     color: gray;
                 }
 
+                .markdown a:hover {
+                  text-decoration: underline;
+                }
+
+                .markdown a:visited {
+                  color: gray;
+                }
+
+                /* Style for floatting action button*/
+
+                .img_floatting_button {
+                  transform: rotate(-45deg)
+                }
                 .btn {
                   display: inline-flex;
                   font-family: 'Roboto', sans-serif;
@@ -93,15 +105,14 @@ const Template = (props) => {
                   border-radius: 50%;
                   padding: 0 !important;
                   font-size: 18px;
-                }
-.               .btn-multi {
+                }             
+                .btn-multi {
                   position: fixed;
                   z-index: 2000;
                   height: 200px;
                   width:200px;
                   left: 75px;
                   top: 0px;
-
                 }
                 .btn-multi input {
                   display: none;
@@ -188,6 +199,8 @@ const Template = (props) => {
                   -moz-user-select: none;
                   -ms-user-select: none;
                 }
+
+                /*Media-queries for screen settings */
                 @media (min-width:900px) {
                     .markdown pre {
                         background-color: #f5f5f5;
@@ -203,11 +216,12 @@ const Template = (props) => {
                     }
                     }
             `}</style>
-    </Layout>
-)}
+    </Layout >
+  )
+}
 
-Template.getInitialProps = async function(context) {
-  const {identifiant } = context.query
+Template.getInitialProps = async function (context) {
+  const { identifiant } = context.query
   const res = await fetch(`http://localhost:9000/api/${identifiant}`.toLowerCase())
   const data = await res.json()
 
