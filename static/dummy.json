@@ -48,5 +48,25 @@
         "datascience"
       ]
     }
+  ],
+  "projets": [
+    {
+      "titre": "Blog",
+      "description": "This project is a copy of my personal website and this time, using NextJs framework ",
+      "image_url": "",
+      "adresse": "https://github.com/Rizialdi/Blog"
+    },
+    {
+      "titre": "Bliget",
+      "description": "Loren impusum is not a text et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent in",
+      "image_url": "",
+      "adresse": "https://github.com/Rizialdi/Blog"
+    },
+    {
+      "titre": "Blague",
+      "description": "et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent in",
+      "image_url": "",
+      "adresse": "https://github.com/Rizialdi/Blog"
+    }
   ]
 }
