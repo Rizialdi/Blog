@@ -4,10 +4,10 @@ import PageTitle from './PageTitle'
 export default (props) => {
 
     return (
-        <div className = "App">
-            <Header className = "header"/>
-            <PageTitle active_item = {props.page_title}/>
-            <div className = 'corps-page'>
+        <div className="App">
+            <Header className="header" />
+            <PageTitle active_item={props.page_title} />
+            <div className='corps-page'>
                 {props.children}
             </div>
             <style global jsx>{`
@@ -48,13 +48,31 @@ export default (props) => {
                 li {
                     color: white;
                 }
-                @media (max-width:900px) {
+                @media (min-width:958px) {
+                    .overlay-content {
+                        visibility: hidden;
+                    }
+                }
+                @media (max-width:960px) {
                     .header {
                         visibility:hidden;
                         width: 0px
                     }
                     .App {
                         display:block
+                    }
+                    .App > .pageTitle {
+                        height: 4em;
+                        align-items: center;
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+
+                    }
+                    .menu_icon, .menu_icon_close {
+                        color: black !important;
+                        line-height: 2rem;
+                        background-color: white;
                     }
                     }
             `}</style>

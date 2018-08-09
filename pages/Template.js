@@ -7,13 +7,13 @@ import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-s
 
 const Template = (props) => {
   return (
-    <Layout page_title={`Posts/${props.source.data.title}`}>
+    <Layout page_title={`${props.source.data.title}`}>
       <div>
         <Markdown source={props.source.data.body} className="markdown" />
         <div className="btn-multi">
           <input type="checkbox" id="multi-btn" name="multi-btn" />
           <label htmlFor="multi-btn">
-            <a href={`https://www.facebook.com/sharer/sharer.php?u=${props.source.data.url}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faFacebookF} size="2x" rotation={45} /></a>
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${props.source.data.url}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faFacebookF} size="2x" /></a>
             <a href={`https://twitter.com/intent/tweet?url=${props.source.data.url}&text=${props.source.data.summary}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faTwitter} size="2x" /></a>
             <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${props.source.data.url}&title=${props.source.data.title}&summary=${props.source.data.summary}`} className="btn btn-circle" target="_blank"><FontAwesomeIcon className="icon" icon={faLinkedinIn} size="2x" /></a>
             <span className="btn btn-circle"><FontAwesomeIcon className="icon" icon={faTimesCircle} size="2x" /></span>
@@ -31,7 +31,7 @@ const Template = (props) => {
                     text-align: justify;
                     color: black;
                     max-width: 840px;
-                    z-index: 1000
+                    z-index: 1000;
                 }
 
                 .markdown li {
