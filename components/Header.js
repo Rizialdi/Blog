@@ -10,12 +10,12 @@ class Header extends Component {
             nom: 'Accueil',
             lien: "http://www.free-icons-download.net/images/house-home-icon-70046.png",
             description: "icone_acceuil"
-        },
+        },/*
         {
             nom: 'Projets',
             lien: "https://cdn0.iconfinder.com/data/icons/teamwork-9/64/x-23-256.png",
             description: "icone_curriculum"
-        },
+        },*/
         {
             nom: 'Posts',
             lien: "https://cdn3.iconfinder.com/data/icons/seo-glyph-vol-1/64/seo-glyph-1-12-3-512.png",
