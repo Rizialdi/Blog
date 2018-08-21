@@ -8,6 +8,7 @@ const debug = process.env.NODE_ENV !== 'production'
 module.exports = {
   exportPathMap: function () {
     return {
+      '/': { page: '/Accueil' },
       '/Accueil': { page: '/Accueil' },
       '/Posts': { page: '/Posts' },
       '/Contacts': { page: '/Contacts' },
