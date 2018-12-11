@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from './Header'
 import PageTitle from './PageTitle'
 
@@ -5,6 +6,11 @@ export default (props) => {
 
     return (
         <div className="App">
+            <Head>
+                <title>{props.page_title}</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" type="image/png" href="../static/images/simple_rn.png" />
+            </Head>
             <Header className="header" />
             <PageTitle active_item={props.page_title} />
             <div className='corps-page'>
@@ -43,17 +49,22 @@ export default (props) => {
                     padding: 10px;
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-                    justify-items: center;
+                    justify-items: center;margin: auto;
                 }
                 li {
                     color: white;
                 }
-                @media (min-width:958px) {
+
+                .menu_icon, .menu_icon_close {
+                        visibility: hidden
+                    }
+
+                @media (min-width:985px) {
                     .overlay-content {
                         visibility: hidden;
                     }
                 }
-                @media (max-width:960px) {
+                @media (max-width:980px) {
                     .header {
                         visibility:hidden;
                         width: 0px
@@ -62,17 +73,19 @@ export default (props) => {
                         display:block
                     }
                     .App > .pageTitle {
-                        height: 4em;
+                        height: 3.5em;
                         align-items: center;
                         display: flex;
-                        position: relative;
                         align-items: center;
 
+                    }
+                    .App .corps-page {
+                        margin-top: 5em
                     }
                     .menu_icon, .menu_icon_close {
                         color: black !important;
                         line-height: 2rem;
-                        background-color: white;
+                        visibility: visible
                     }
                     }
             `}</style>

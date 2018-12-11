@@ -62,26 +62,3 @@ Les données d'entrée et de sortie fournies pour l'apprentissage, seuls les par
 
  Aussi, la complexité d'un réseau neuronal peut permettre de saisir des nuances entre les variables d'entrée et de sortie. En effet, on peut s'attendre qu'un réseau à deux couches cachées prédise différement qu'un autre possédant dix couhes cachées. [La multitude d'architectures existantes](http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png) et de leurs variantes a donné naissance à l'apprentissage profond (deep learning) 
 
-Pour plus:
-
-http://www.asimovinstitute.org/neural-network-zoo/
-
-
-
-```python
-import pandas as pd
-
-destinations = pd.read_csv("destinations.csv")
-test = pd.read_csv("test.csv")
-train = pd.read_csv("train.csv")
-```
-
-
-bb
-bb
-
-
-
-
-
-b

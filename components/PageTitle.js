@@ -24,17 +24,30 @@ var PageTitle = (props) => {
                     border-bottom: 2px solid black;
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     margin-top: 0px;
+                    position: fixed;
+                    top: 0px;
+                    left: 250px
+                }
+                @media (max-width:980px) {
+                    .pageTitle {
+                        left: 0px
+                    }
+
+                    .pageTitle h1 {
+                        margin-left: 0.3em
+                    }
                 }
                 .menu_icon, .menu_icon_close{
                         height: 0px;
                         cursor: pointer;
                         font-size: 2.5rem;
-                        color: #f3f3f3;
+                        color: black;
                         transition: 0.7s;
                         position: absolute;
                         top: 1rem;
                         right: 0rem;
                         z-index: 100;
+                        margin-right: 0.2em;
                     }
                     
                     .floating_menu label .overlay-content {

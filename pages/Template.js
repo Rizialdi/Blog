@@ -106,14 +106,7 @@ const Template = (props) => {
                   padding: 0 !important;
                   font-size: 18px;
                 }             
-                .btn-multi {
-                  position: fixed;
-                  z-index: 2000;
-                  height: 200px;
-                  width:200px;
-                  left: 75px;
-                  top: 0px;
-                }
+                
                 .btn-multi input {
                   display: none;
                 }

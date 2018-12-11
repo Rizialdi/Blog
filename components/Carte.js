@@ -2,18 +2,18 @@ import Link from 'next/link'
 
 export default (props) => {
     return (
-            <div>
-                <Link href = {props.adresse}>
-                    <a className = 'carte-content'>
-                        <div style={{backgroundImage: `url(${props.image})`}} className = 'carte-image'>
-                        </div>
-                        <div className = 'carte-description'>
-                            <h1>{props.titre}</h1>
-                            <p>{props.description}</p>
-                        </div>
-                    </a>
-                </Link>
-                <style jsx global>{`
+        <div>
+            <Link href={props.adresse}>
+                <a className='carte-content'>
+                    <div style={{ backgroundImage: `url(${props.image})` }} className='carte-image'>
+                    </div>
+                    <div className='carte-description'>
+                        <h1>{props.titre}</h1>
+                        <p>{props.description}</p>
+                    </div>
+                </a>
+            </Link>
+            <style jsx global>{`
                     .carte-content {
                         display: flex;
                         flex-direction: column;
@@ -86,6 +86,6 @@ export default (props) => {
                         color: black;
                     }
                 `}</style>
-            </div>
-        )
+        </div>
+    )
 }
