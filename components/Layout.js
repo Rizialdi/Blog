@@ -7,9 +7,9 @@ export default (props) => {
     return (
         <div className="App">
             <Head>
-                <title>{props.page_title}</title>
+                <title>{props.meta_title == null ? props.page_title : props.meta_title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="icon" type="image/png" href="../static/images/simple_rn.png" />
+                <link rel="icon" type="image/png" href="../static/images/cercle.ico" />
             </Head>
             <Header className="header" />
             <PageTitle active_item={props.page_title} />
@@ -48,8 +48,8 @@ export default (props) => {
                     grid-row: 2 / 3;
                     padding: 10px;
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-                    justify-items: center;margin: auto;
+                    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+                    justify-items: center;
                 }
                 li {
                     color: white;
