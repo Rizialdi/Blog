@@ -7,7 +7,7 @@ import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-s
 
 const Template = (props) => {
   return (
-    <Layout page_title={`${props.source.data.title}`}>
+    <Layout page_title={`${props.source.data.title}`} meta_title={`Posts:${props.source.data.title}`}>
       <div>
         <Markdown source={props.source.data.body} className="markdown" />
         <div className="btn-multi">
@@ -216,7 +216,7 @@ const Template = (props) => {
 Template.getInitialProps = async function (context) {
   const { identifiant } = context.query
   const res = await fetch(`http://localhost:9000/api/${identifiant}`.toLowerCase())
-  const data = await res.json()
+  let data = await res.json()
 
   return {
     source: data
