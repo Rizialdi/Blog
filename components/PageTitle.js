@@ -11,7 +11,6 @@ var PageTitle = (props) => {
                     <span className="menu_icon">&#9776;</span>
                     <div className="overlay-content">
                         <a href="/Accueil">Accueil</a>
-                        <a href="/Projets">Projets</a>
                         <a href="/Posts">Posts</a>
                         <a href="/Contacts">Contacts</a>
                     </div>
