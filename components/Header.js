@@ -83,6 +83,7 @@ class Header extends Component {
                         min-width: 250px;
                         background-color: black;
                         align-items: center;
+                        transition: 2.5s;
                     }
                     
                     .header > img {

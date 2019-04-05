@@ -2,7 +2,7 @@ import React from 'react';
 
 var PageTitle = (props) => {
     return (
-        <div className='pageTitle'>
+        <div className={props.extends? "pageTitle":"pageTitle-extends"}>
             <h1>{props.active_item}</h1>
             <div className="floating_menu">
                 <input type="checkbox" id="menu_dir" name="multi-btn" />
@@ -25,14 +25,30 @@ var PageTitle = (props) => {
                     margin-top: 0px;
                     position: fixed;
                     top: 0px;
-                    left: 250px
+                    left: 250px;
                 }
+
+                .pageTitle-extends {
+                    background-color: #f3f3f3;
+                    text-align: center;
+                    border-bottom: 2px solid black;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    margin-top: 0px;
+                    top: 0px;
+                    width:60%;
+                    margin:0 auto;
+                    position: fixed;
+                    transition: 1.5s;
+                    
+                }
+
                 @media (max-width:980px) {
-                    .pageTitle {
-                        left: 0px
+                    .pageTitle, .pageTitle-extends {
+                        left: 0px;
+                        margin:0px;
                     }
 
-                    .pageTitle h1 {
+                    .pageTitle h1, .pageTitle-extends h1 {
                         margin-left: 0.3em
                     }
                 }
@@ -115,7 +131,7 @@ var PageTitle = (props) => {
                       opacity: 1
                     }
                     
-                    .pageTitle .floating_menu input {
+                    .floating_menu input {
                       display:none
                     }
             `}</style>
