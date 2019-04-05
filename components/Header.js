@@ -3,13 +3,37 @@ import ListMenuItem from './List_menu_item'
 import { Link } from '../routes'
 
 class Header extends Component {
-    render() {
-        let avatar = 'https://avatars2.githubusercontent.com/u/18710740?s=400&u=c11853b720d3288d376a3103cf5c8bb82c37fc13&v=4';
+    constructor(props) {
+        super(props);
+        this.close_header = this.close_header.bind(this);
+        this.show_header = this.show_header.bind(this);
+        this.state = {
+            hide: true
+        };
+    }
 
-        let menu = [{
-            nom: 'Accueil',
-            lien: "http://www.free-icons-download.net/images/house-home-icon-70046.png",
-            description: "icone_acceuil"
+    close_header() {
+        this.setState({
+            hide: !this.state.hide
+        })
+        this.props.a()
+    }
+
+    show_header() {
+        this.setState({
+            hide: !this.state.hide
+        })
+        this.props.a()
+    }
+
+    render() {
+        let avatar = '../static/images/me.jpeg';
+
+        let menu = [
+        {
+            nom: 'Posts',
+            lien: "../static/images/post_icon.png",
+            description: "icone_posts"
         },/*
         {
             nom: 'Projets',
@@ -17,13 +41,13 @@ class Header extends Component {
             description: "icone_curriculum"
         },*/
         {
-            nom: 'Posts',
-            lien: "https://cdn3.iconfinder.com/data/icons/seo-glyph-vol-1/64/seo-glyph-1-12-3-512.png",
-            description: "icone_posts"
+            nom: 'About',
+            lien: "../static/images/home_icon.png",
+            description: "icone_acceuil"
         },
         {
             nom: 'Contacts',
-            lien: "https://cdn2.iconfinder.com/data/icons/mail-dan-contact/64/Mail_and_Contact-03-512.png",
+            lien: "../static/images/mail_icon.png",
             description: "icone_conctacts"
         }]
 
@@ -41,11 +65,16 @@ class Header extends Component {
 
         return (
             <div>
-                <div className='header'>
-                    <img src={avatar} alt="avatar" />
-                    <ul>
-                        {list_menu}
-                    </ul>
+                <div>
+                    { !this.state.hide ?
+                    (<img src='../static/images/show_header.svg' id="show_header" onClick={this.show_header} />) :
+                    (<div className='header'>
+                        <img src={avatar} alt="avatar" />
+                        <ul>
+                            {list_menu}
+                        </ul>
+                        <img src='../static/images/close_header.svg' id="close_header" onClick={this.close_header}/>
+                    </div>)}
                 </div>
                 <style jsx global>{`
                     .header {
@@ -59,7 +88,7 @@ class Header extends Component {
                     .header > img {
                         margin-top: 3rem;
                         border-radius: 50%;
-                        width: 200px
+                        width: 8em;
                     }
                     
                     ul {
@@ -82,7 +111,43 @@ class Header extends Component {
                     .active {
                         color: red;
                         text-decoration: underline
-                    }            
+                    } 
+                    
+                    #close_header {
+                        background: white;
+                        width: 2em;
+                        height: 2em;
+                        position: absolute;
+                        bottom: 3em;
+                        cursor: pointer;
+                        transition-duration: 0.7s 
+                    }
+
+                    #close_header:focus {
+                        background: blue;
+                        display:none
+                    }
+
+                    #close_header:hover {
+                        transform: rotate(360deg);
+                        background: grey;
+                    }
+
+                    #show_header {
+                        background: white;
+                        border-radius: 50%;
+                        width: 1.8em;
+                        height: 1.8em;
+                        position: fixed;
+                        bottom: 3em;
+                        cursor: pointer;
+                        transition-duration: 0.7s
+                    }
+
+                    #show_header:hover {
+                        transform: rotate(360deg);
+                        background: grey
+                    }
                 `}</style>
             </div>
         )
