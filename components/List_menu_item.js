@@ -9,7 +9,7 @@ var ListMenuItem = (props) => {
             </div>
             <style jsx>{`
                 .list_menu_item {
-                    margin-top: 10px;
+                    margin-top: 15px;
                     font-weight: bold;
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     font-size: 1.2rem;
