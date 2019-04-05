@@ -16,7 +16,7 @@ app.prepare()
   const server = express()
 
   server.get('/', (req, res) => {
-    const actualPage = '/Accueil'
+    const actualPage = '/Posts'
     app.render(req, res, actualPage)
   })
 
