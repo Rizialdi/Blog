@@ -2,13 +2,13 @@ import fetch from 'isomorphic-unfetch'
 import Markdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShareAltSquare, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faShareAltSquare, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const Template = (props) => {
   return (
     <Layout page_title={`${props.source.data.title}`} meta_title={`Posts:${props.source.data.title}`}>
-      <div>
+      <div> 
         <Markdown source={props.source.data.body} className="markdown" />
         <div className="btn-multi">
           <input type="checkbox" id="multi-btn" name="multi-btn" />
