@@ -12,7 +12,8 @@ class Search extends Component {
 
     _handleChange(e) {
         const filterTerm = e.target.value;
-        this.setState({ filterTerm })
+        this.setState({ filterTerm }); 
+        this.props.b(e)
     }
 
     render() {
@@ -20,15 +21,15 @@ class Search extends Component {
             <div className='search_component'>
                 <div className="search">
                     {this.state.search_click ? <input type="text"
-                        name="filter_search" value={this.state.filterTerm} placeholder="tag or sujects" 
+                        name="filter_search" value={this.state.filterTerm} placeholder="tag or subjects" 
                         maxLength="10" onChange={this._handleChange} /> : ''}
                     {this.state.search_click?
                             <img src="../static/images/cancel.svg"
                              alt="close_icon" className="close_icon"
-                              onClick={() => { this.setState({ search_click: !this.state.search_click }) }} /> :
+                              onClick={() => { this.setState({ search_click: !this.state.search_click}) }} /> :
                             <img src="../static/images/search.svg"
                              alt="search_icon" className="search_icon"
-                             onClick={() => { this.setState({ search_click: !this.state.search_click, filterTerm: '' }) }} /> 
+                             onClick={() => { this.setState({search_click: !this.state.search_click }) }} /> 
                 }
                     
                        </div>
@@ -46,6 +47,8 @@ class Search extends Component {
                         background-color: #dadada;
                         border-radius: 0.5em 0.5em 0 0;
                         transition-duration: 0.7s;
+                        margin-right: 1em;
+
                     }
                     @keyframes blink { 
                         50% { border-bottom: solid #000000 0.1em; } 
@@ -85,6 +88,12 @@ class Search extends Component {
                         transform: rotate(360deg);
                         transition-duration: 0.7s;
                         width: auto
+                    }
+
+                    @media (max-width:980px) {
+                        .search_component {
+                            display: none
+                        }
                     }
                 `}</style>
             </div>
