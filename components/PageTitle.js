@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Search from './Search'
 var PageTitle = (props) => {
     return (
         <div className={props.extends? "pageTitle":"pageTitle-extends"}>
             <h1>{props.active_item}</h1>
+            <Search/>
             <div className="floating_menu">
                 <input type="checkbox" id="menu_dir" name="multi-btn" />
                 <label htmlFor="menu_dir">
@@ -39,7 +40,6 @@ var PageTitle = (props) => {
                     margin:0 auto;
                     position: fixed;
                     transition: 1.5s;
-                    
                 }
 
                 @media (max-width:980px) {
