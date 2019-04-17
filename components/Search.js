@@ -19,7 +19,7 @@ class Search extends Component {
     render() {
         return (
             <div className='search_component'>
-                <div className="search">
+                <div>
                     {this.state.search_click ? <input type="text"
                         name="filter_search" value={this.state.filterTerm} placeholder="tag or subjects" 
                         maxLength="10" onChange={this._handleChange} /> : ''}
