@@ -24,11 +24,11 @@ class Search extends Component {
                         maxLength="10" onChange={this._handleChange} /> : ''}
                     {this.state.search_click?
                             <img src="../static/images/cancel.svg"
-                             alt="search_icon" className="close_icon"
+                             alt="close_icon" className="close_icon"
                               onClick={() => { this.setState({ search_click: !this.state.search_click }) }} /> :
                             <img src="../static/images/search.svg"
-                             alt="close_icon" className="search_icon"
-                             onClick={() => { this.setState({ search_click: !this.state.search_click }) }} /> 
+                             alt="search_icon" className="search_icon"
+                             onClick={() => { this.setState({ search_click: !this.state.search_click, filterTerm: '' }) }} /> 
                 }
                     
                        </div>
