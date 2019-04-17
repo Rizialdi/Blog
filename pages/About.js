@@ -14,7 +14,7 @@ export default () => {
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     font-weight: 400;
                     font-size: 1.5rem;
-                    max-width: 1000px;
+                    max-width: 920px;
                 }
                 a {
                     color: gray;

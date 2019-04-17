@@ -21,7 +21,7 @@ export default () => {
                     color: gray;
                 }
                 p {
-                    max-width: 800px;
+                    max-width: 840px;
                     text-align: justify;
                 }
             `}</style>

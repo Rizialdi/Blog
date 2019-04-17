@@ -18,7 +18,7 @@ var PageTitle = (props) => {
             </div>
             <style jsx>{`
                 .pageTitle {
-                    background-color: #f3f3f3;
+                    background-color: #dadada;
                     text-align: center;
                     border-bottom: 2px solid black;
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

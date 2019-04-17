@@ -30,7 +30,7 @@ const Template = (props) => {
                     width: 100%;
                     text-align: justify;
                     color: black;
-                    max-width: 840px;
+                    max-width: 920px;
                     z-index: 1000;
                 }
 
