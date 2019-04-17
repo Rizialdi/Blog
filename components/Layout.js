@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Head from 'next/head';
 import Header from './Header'
 import PageTitle from './PageTitle'
+import Search from './Search'
 
 export default class Layout extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ export default class Layout extends Component {
                 </Head>
                 <Header a = {this.extends_corps_page} className={this.state.extends? "header":""} />
                 <PageTitle active_item={props.page_title} extends={this.state.extends} /> 
+                <Search />
                 <div className={this.state.extends? 'corps-page':'corps-page-extends'}>
                     {props.children}
                 </div>
@@ -52,7 +54,6 @@ export default class Layout extends Component {
                     .App > .pageTitle {
                         grid-column: col-header-fin / 3;
                         grid-row: row-start / 2;
-                        z-index: 99;
                         left: 250px;
                         right: 0;
                         
@@ -61,7 +62,6 @@ export default class Layout extends Component {
                     .App > .pageTitle-extends {
                         grid-column: col-start / 3;
                         grid-row: row-start / 2;
-                        z-index: 99;
                         left: 20px;
                         right: 0;
                         
