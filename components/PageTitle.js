@@ -9,8 +9,8 @@ var PageTitle = (props) => {
                     <span className="menu_icon_close">&#10006;</span>
                     <span className="menu_icon">&#9776;</span>
                     <div className="overlay-content">
-                        <a href="/Accueil">Accueil</a>
                         <a href="/Posts">Posts</a>
+                        <a href="/About">About</a>
                         <a href="/Contacts">Contacts</a>
                     </div>
                 </label>
