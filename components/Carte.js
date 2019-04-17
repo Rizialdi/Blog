@@ -21,7 +21,8 @@ export default (props) => {
                         border-radius: 15px;
                         height: 30rem;
                         width: 17vw;
-                        min-width: 20rem;
+                        min-width: 21rem;
+                        max-width: 24rem;
                         background-color: #d6ecff;
                         padding: 0;
                         box-shadow: 5px 5px 25px 0 rgba(28, 55, 77, 0.6);
