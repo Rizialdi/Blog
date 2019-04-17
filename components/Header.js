@@ -69,7 +69,11 @@ class Header extends Component {
                     { !this.state.hide ?
                     (<img src='../static/images/show_header.svg' id="show_header" onClick={this.show_header} />) :
                     (<div className='header'>
-                        <img src={avatar} alt="avatar" />
+                        <Link route={`/Posts`} key={'Ps'} >
+                        <a>
+                           <img src={avatar} alt="avatar" className='avatar' />
+                        </a>
+                        </Link>
                         <ul>
                             {list_menu}
                         </ul>
@@ -87,6 +91,12 @@ class Header extends Component {
                     }
                     
                     .header > img {
+                        margin-top: 3rem;
+                        border-radius: 50%;
+                        width: 8em;
+                    }
+
+                    .avatar {
                         margin-top: 3rem;
                         border-radius: 50%;
                         width: 8em;
