@@ -13,7 +13,7 @@ export default (props) => {
                     </div>
                 </a>
             </Link>
-            <style jsx global>{`
+            <style jsx global>{`                    
                     .carte-content {
                         display: flex;
                         flex-direction: column;
@@ -30,7 +30,52 @@ export default (props) => {
                         transition: 0.3s box-shadow ease-in-out;
                         margin: 20px 20px 0px 0px;
                         color: black;
-                        transform: rotateX(0deg)
+                        transform: rotateX(0deg);
+                        animation: fadein 1.5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+                        -moz-animation: fadein 1.5s cubic-bezier(1.0, 0.5, 0.8, 1.0); /* Firefox */
+                        -webkit-animation: fadein 1.5s cubic-bezier(1.0, 0.5, 0.8, 1.0); /* Safari and Chrome */
+                        -o-animation: fadein 1.5s cubic-bezier(1.0, 0.5, 0.8, 1.0); /* Opera */
+                    }
+
+                    @keyframes fadein {
+                        from {
+                            opacity:0;
+                            transform: translateY(20px)
+                        }
+                        to {
+                            opacity:1;
+                            transform: translateY(0px)
+                        }
+                    }
+                    @-moz-keyframes fadein { /* Firefox */
+                        from {
+                            opacity:0;
+                            transform: translateY(20px)
+                        }
+                        to {
+                            opacity:1;
+                            transform: translateY(0px)
+                        }
+                    }
+                    @-webkit-keyframes fadein { /* Safari and Chrome */
+                        from {
+                            opacity:0;
+                            transform: translateY(20px)
+                        }
+                        to {
+                            opacity:1;
+                            transform: translateY(0px)
+                        }
+                    }
+                    @-o-keyframes fadein { /* Opera */
+                        from {
+                            opacity:0;
+                            transform: translateY(20px)
+                        }
+                        to {
+                            opacity:1;
+                            transform: translateY(0px)
+                        }
                     }
                     
                     .carte-image {
