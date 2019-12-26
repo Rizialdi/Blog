@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default (props) => {
     return (
-        <div>
+        <div className='carte-body'>
             <Link href={props.adresse}>
                 <a className='carte-content'>
                     <div style={{ backgroundImage: `url(${props.image})` }} className='carte-image'>
@@ -29,7 +29,8 @@ export default (props) => {
                         cursor: pointer;
                         transition: 0.3s box-shadow ease-in-out;
                         margin: 20px 20px 0px 0px;
-                        color: black
+                        color: black;
+                        transform: rotateX(0deg)
                     }
                     
                     .carte-image {
@@ -63,7 +64,7 @@ export default (props) => {
                     }
                     
                     .carte-description > h1 {
-                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-family: Rancho, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                         font-weight: bold;
                         font-size: 1.7rem;
                         line-height: 0rem;
