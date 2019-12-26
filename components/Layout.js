@@ -26,12 +26,15 @@ export default class Layout extends Component {
                     <title>{props.meta_title == null ? props.page_title : props.meta_title}</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <link rel="icon" type="image/png" href="../static/images/cercle.ico" />
+                    <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet"/> 
                 </Head>
                 <Header a = {this.extends_corps_page} className={this.state.extends? "header":""} />
                 <PageTitle active_item={props.page_title} extends={this.state.extends} /> 
                 <div className={this.state.extends? 'corps-page':'corps-page-extends'}>
                     {props.children}
                 </div>
+                <script src="../static/js/nanobar.min.js"></script>
+                <script src="../static/js/custom.js"></script>
                 <style global jsx>{`
                     .App {
                         background-color: white;
@@ -129,6 +132,21 @@ export default class Layout extends Component {
                             line-height: 2rem;
                             visibility: visible
                         }
+                        }
+
+                        .progress-bar {
+                            background: linear-gradient(to right, green var(--scroll), transparent 0);
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            position: fixed;
+                            top: 0;
+                            left: 0px;
+                            height: 4px;
+                            z-index: 1;
+                        }
+      
+                        .my-class .bar {
+                          background: black;
                         }
                 `}</style>
             </div>

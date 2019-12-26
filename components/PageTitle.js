@@ -1,7 +1,7 @@
 import React from 'react';
 var PageTitle = (props) => {
     return (
-        <div className={props.extends? "pageTitle":"pageTitle-extends"}>
+        <div className={props.extends ? "pageTitle" : "pageTitle-extends"}>
             <h1>{props.active_item}</h1>
             <div className="floating_menu">
                 <input type="checkbox" id="menu_dir" name="multi-btn" />
@@ -17,26 +17,23 @@ var PageTitle = (props) => {
             </div>
             <style jsx>{`
                 .pageTitle {
-                    background-color: #dadada;
+                    background-color: #f7f7f7;
                     text-align: center;
-                    border-bottom: 2px solid black;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                    margin-top: 0px;
-                    position: fixed;
-                    top: 0px;
-                    left: 250px;
+                    border-bottom: 2px dashed black;
+                    font-family: "Rancho";
+                    font-size: 1.25em;
+                    position: static;
                 }
 
                 .pageTitle-extends {
-                    background-color: #f3f3f3;
+                    background-color: #f7f7f7;
                     text-align: center;
-                    border-bottom: 2px solid black;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                    margin-top: 0px;
-                    top: 0px;
-                    width:60%;
+                    border-bottom: 2px dashed black;
+                    font-family: "Rancho";
+                    font-size: 1.25em;
+                    width:70%;
                     margin:0 auto;
-                    position: fixed;
+                    position: static;
                     transition: 1.5s;
                 }
 

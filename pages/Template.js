@@ -10,6 +10,10 @@ const Template = (props) => {
     <Layout page_title={`${props.source.data.title}`} meta_title={`Posts:${props.source.data.title}`}>
       <div> 
         <Markdown source={props.source.data.body} className="markdown" />
+        <div className="nanobar my-class">
+            <div className="bar"></div>
+        </div>
+        <div className="progress-bar"></div>
         <div className="btn-multi">
           <input type="checkbox" id="multi-btn" name="multi-btn" />
           <label htmlFor="multi-btn">
@@ -208,6 +212,21 @@ const Template = (props) => {
                         width: 100%;  
                     }
                     }
+
+                    .progress-bar {
+                      background: linear-gradient(to right, green var(--scroll), transparent 0);
+                      background-repeat: no-repeat;
+                      width: 100%;
+                      position: fixed;
+                      top: 0;
+                      left: 0px;
+                      height: 4px;
+                      z-index: 1;
+                  }
+
+                  .my-class .bar {
+                    background: black;
+                  }
             `}</style>
     </Layout >
   )
@@ -215,7 +234,7 @@ const Template = (props) => {
 
 Template.getInitialProps = async function (context) {
   const { identifiant } = context.query
-  const res = await fetch(`http://localhost:9000/api/${identifiant}`.toLowerCase())
+  const res = await fetch(`http://localhost:3000/api/${identifiant}`.toLowerCase())
   let data = await res.json()
 
   return {
