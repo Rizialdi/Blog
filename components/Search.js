@@ -35,16 +35,17 @@ class Search extends Component {
                        </div>
                 <style jsx>{`
                     input {
-                        width: 10em;
+                        width: 7em;
                         height: 3em;
                         position: relative;
                         top: -15px;
-                        font-size: 1em;
-                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-size: 1.4em;
+                        font-family: Rancho, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        text-transform: capitalize;
                         padding: 0px;
-                        border: solid #dadada;
+                        border: solid #f7f7f7;
                         border-bottom: solid black 0.1em;
-                        background-color: #dadada;
+                        background-color: #f7f7f7;
                         border-radius: 0.5em 0.5em 0 0;
                         transition-duration: 0.7s;
                         margin-right: 1em;
@@ -54,10 +55,10 @@ class Search extends Component {
                         50% { border-bottom: solid #000000 0.1em; } 
                     }
                     input:focus {
-                        background-color: #dadada;
+                        background-color: #f7f7f7;
                         animation: blink 0.5s step-end infinite alternate;
-                        border: solid #dadada;
-                        width: 15em;
+                        border-bottom: dashed #f5f5f5;
+                        width: 10em;
                         transition-duration: 0.7s;
                     }
     
@@ -65,7 +66,7 @@ class Search extends Component {
                         cursor:pointer;
                     }
                     .search_component {
-                        background-color: #dadada;
+                        background-color: #f7f7f7;
                         position: fixed;
                         display: inline-block
                         padding: 0px
@@ -77,8 +78,10 @@ class Search extends Component {
 
                     }
                     .search_icon {
+                        position: relative;
+                        top: 1.0em;
                         height: 2em;
-                        width: auto
+                        width: auto;
                     }
                     .close_icon {
                         height: 1.4em;
