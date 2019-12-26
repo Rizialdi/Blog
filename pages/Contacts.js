@@ -1,8 +1,10 @@
 import Layout from '../components/Layout';
+import Form from '../components/Form';
 
 export default () => {
     return (
         <Layout page_title="Contacts">
+            <div>
             <p>
                 Je reste disponible pour toute informations complementaires
                 sur <a href="mailto:rasselio.diack@gmail.com">Gmail</a>.
@@ -11,6 +13,8 @@ export default () => {
                 <br />
                 En fin de journée ou pendant le week-end, je fais souvent un tour sur mon <a target="new" href="https://github.com/Rizialdi">Github</a>. N'hesitez pas à y faire un tour pour d'eventuelles collaborations ou juste y jeter un coup d'oeuil.
             </p>
+            <Form />
+            </div>
             <style jsx>{`
                 * {
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -22,7 +26,9 @@ export default () => {
                 }
                 p {
                     max-width: 920px;
-                    text-align: justify;
+                    text-align: justify center;
+                    padding-top: 2em;
+                    margin: 0 auto;
                 }
             `}</style>
         </Layout>
