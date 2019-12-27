@@ -19,7 +19,7 @@ export default class Form extends Component {
                 <Input appel="name" tag="Nom" />
                 <Input appel="surname" tag="Prénom" />
                 <Input appel="email" tag="Email" />
-                <Input appel="tel" tag="Téléphone" />
+                <Input appel="subject" tag="Sujet" />
                 <TextArea tag="Message" />
                 <Submit_button />
                 <style jsx>{`
@@ -50,7 +50,7 @@ const Input = (props) => {
     return (
         <div className="wrap-input" data-validate="Nom requis">
             <span className="label-input100">{props.tag}</span>
-            <input type="text" className="input100" type="text" name={props.appel} placeholder={`Entrez votre ${props.tag}`} />
+            <input type="text" className="input100" type="text" name={props.appel} placeholder={`Entrez votre ${props.tag}`} required/>
             <span className="focus-input100"></span>
 
             <style jsx>{`
@@ -122,7 +122,7 @@ const TextArea = (props) => {
     return (
         <div className="wrap-input100" data-validate="Nom requis">
             <span className="label-input100">{props.tag}</span>
-            <textarea className="input100" type="text" name="message" placeholder={`Votre ${props.tag}`} />
+            <textarea className="input100" type="text" name="message" placeholder={`Votre ${props.tag}`} required/>
             <span className="focus-input100"></span>
 
             <style jsx>{`

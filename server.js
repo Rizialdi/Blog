@@ -67,7 +67,7 @@ app.prepare()
       <h3>Details du contact</h3>
       <li>Nom: ${req.body.name} ${req.body.surname} </li>
       <li>Email: ${req.body.email} </li>
-      <li>Tel: ${req.body.tel} </li>
+      <li>Sujet: ${req.body.subject} </li>
       <li>Email: ${req.body.message} </li>
     `
 
