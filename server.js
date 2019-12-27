@@ -33,6 +33,11 @@ app.prepare()
     app.render(req, res, actualPage)
   })
 
+  server.get('/Contacts', (req, res) => {
+    const actualPage = '/Contacts'
+    app.render(req, res, actualPage)
+  })
+
   server.get('/Posts/:id', (req, res) => {
     const actualPage = '/Template'
     const queryParams = {identifiant: req.params.id}
@@ -65,7 +70,6 @@ app.prepare()
       <li>Tel: ${req.body.tel} </li>
       <li>Email: ${req.body.message} </li>
     `
-    console.log(output);
 
     let transporter = nodemailer.createTransport({
       host: "smtp.mailtrap.io",
@@ -98,7 +102,7 @@ app.prepare()
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     if (info.messageId) {
-      req.flash('notify', 'This is a notification')
+      res.cookie('success_message', true, { expires: new Date(Date.now() + 5000) })
       res.redirect('/Contacts')
     } else res.redirect('/Contacts') 
     } catch (error) {
