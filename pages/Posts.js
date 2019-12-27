@@ -28,6 +28,7 @@ export default class Posts extends Component {
             <Layout page_title="Posts">
                 <Search b={this.filter.bind(this)} />
                 {cartes}
+                <script src="../static/js/movement.js"></script>
             </Layout>
         )
     }

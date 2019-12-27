@@ -35,8 +35,6 @@ export default class Layout extends Component {
                 </div>
                 <script src="../static/js/nanobar.min.js"></script>
                 <script src="../static/js/custom.js"></script>
-                <script src="../static/js/movement.js"></script>
-                <script src="../static/js/modal.js"></script>
                 <style global jsx>{`
                     .App {
                         background-color: white;

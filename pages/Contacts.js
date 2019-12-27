@@ -25,6 +25,7 @@ const Contacts = ({success = false}) => {
             </p>
             <Form />
             </div>
+            <script src="../static/js/modal.js"></script>
             <style jsx>{`
                 * {
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -152,14 +153,16 @@ const Contacts = ({success = false}) => {
 }
 
 Contacts.getInitialProps = function (context) {
-    const { req } = context;
     let success_message = false
     //const  success_message = req.headers.cookie
-    if(req.headers.cookie) { 
-        success_message = req.headers.cookie.split('=')[1]
+    if(context != undefined) { 
+        if(context.req != undefined){
+            let {req} = context
+            if(req.headers.cookie != undefined){
+                success_message = context.req.headers.cookie.split('=')[1]
+        }
+        }
     } else {}
-
-
     return {
       success: success_message
     }
